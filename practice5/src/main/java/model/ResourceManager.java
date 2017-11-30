@@ -18,12 +18,7 @@ public enum ResourceManager {
 
     }
     public String getValue(String key) {
-        try {
-            return new String(resourceBundle.getString(key).getBytes("ISO-8859-1"),"UTF-8");
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
-        return null;
+        return new String(resourceBundle.getString(key));
     }
     public Enumeration getSetKey() {
         return resourceBundle.getKeys();
